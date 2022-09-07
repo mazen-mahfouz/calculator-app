@@ -1,0 +1,265 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: -webkit-fill-available;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    background-color: hsl(222, 26%, 31%);
+    transition: background .5s;
+}
+
+:root{
+    --background-main-app: hsl(222, 26%, 31%);
+    --main-text: white;
+    --color-toggle-span: hsl(6, 63%, 50%);
+    --color-toggle-span-hover: #f26f58;
+    --color-toggle-span-shadow: #7a2b27;
+    --color-toggle: hsl(223, 31%, 20%);
+    --button-setting: #647299;
+    --shadow-button-setting: #414e71;
+    --background-button: #eae3db;
+    --color-button: #252d44;
+    --screen-calc: hsl(224, 36%, 15%);
+    --screen-calc-hover:hsl(224, 34%, 19%);
+    --shadow-button: #b3a695;
+    --button-setting-hover:#a1b2e0;
+    --button-hover: #ffffff;
+}
+
+#app-calc{
+    background-color: var(--background-main-app);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 25px;
+    transition: background .5s;
+}
+
+#app-calc #header-app-calc{
+    width: 100%;
+}
+
+#app-calc #header-app-calc #screen-calc{
+    width: 100%;
+    height: 90px;
+    background-color: var(--screen-calc);
+    margin-top: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    color: var(--main-text);
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: background .5s;
+}
+
+#app-calc #header-app-calc #screen-calc:hover{
+    background-color: var(--screen-calc-hover);
+}
+
+#app-calc #header-app-calc #navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#app-calc #header-app-calc #navbar h1{
+    color:var(--main-text);
+    font-weight: 600;
+    font-size: 28px;
+    transition: color .5s;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 5px 15px;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle h4{
+    grid-row: 2;
+    font-size: 12px;
+    color: var(--main-text);
+    letter-spacing: 1.1px;
+    transition: color .5s;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle ul{
+    list-style: none;
+    display: inline-flex;
+    grid-column: 2/2;
+    grid-row: 1/1;
+    color: var(--main-text);
+    font-size: 13px;
+    gap: 12px;
+    transition: color .5s;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle #div_toggle{
+    width: 55px;
+    height: 22px;
+    background-color: var(--color-toggle);
+    border-radius: 20px;
+    grid-row: 2;
+    position: relative;
+    transition: background .5s;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle #div_toggle span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    background-color: var(--color-toggle-span);
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    transition: .5s;
+}
+
+#app-calc #header-app-calc #navbar #all-toggle #div_toggle span:hover{
+    background-color: var(--color-toggle-span-hover);
+}
+
+#app-calc #buttons-calc{
+    width: 100%;
+    background-color: var(--color-toggle);
+    border-radius: 12px;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 50px);
+    padding: 22px;
+    gap: 14px;
+    transition: background .5s;
+}
+
+#app-calc #buttons-calc button{
+    font-size: 25px;
+    border: 0;
+    background-color: var(--background-button);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 0px 0px var(--shadow-button);
+    color: var(--color-button);
+    font-weight: 600;
+    transition: background, box-shadow .5s;
+}
+
+#app-calc #buttons-calc button:hover{
+    background-color: var(--button-hover);
+}
+
+#app-calc #buttons-calc #del{
+    background-color: var(--button-setting);
+    color: #f8ffff;
+    box-shadow: 0px 3px 0px 0px var(--shadow-button-setting);
+    font-size: 16px;
+    transition: background, box-shadow .5s;
+}
+
+#app-calc #buttons-calc #del:hover{
+    background-color: var(--button-setting-hover);
+}
+
+#app-calc #buttons-calc #reset{
+    grid-column: 1/3;
+    background-color: var(--button-setting);
+    color: #f8ffff;
+    box-shadow: 0px 3px 0px 0px var(--shadow-button-setting);
+    font-size: 16px;
+    transition: background, box-shadow .5s;
+}
+
+#app-calc #buttons-calc #reset:hover{
+    background-color: var(--button-setting-hover);
+}
+
+#app-calc #buttons-calc #final{
+        grid-column: 3/5;
+        background-color:var(--color-toggle-span);
+        color: #f8ffff;
+        box-shadow: 0px 3px 0px 0px var(--color-toggle-span-shadow);
+        font-size: 20px;
+        transition: background, box-shadow .5s;
+}
+
+#app-calc #buttons-calc #final:hover{
+    background-color: var(--color-toggle-span-hover);
+}
+
+button:hover{
+    background-color: rgb(78, 78, 78);
+}
+
+@media only screen and (max-width: 600px) {
+    #form-app form input{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #form-app form button{
+        margin-left: 0;
+    }
+
+    #pass_change{
+        left: 75%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    #app-calc{
+        padding: 20px 18%;
+    }
+    
+}
+
+@media only screen and (min-width: 620px) {
+    #app-calc{
+        padding: 20px 15%;
+    }
+    
+    #app-calc #buttons-calc{
+        grid-template-rows: repeat(5, 55px);
+        gap: 20px
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+    #app-calc{
+        padding: 20px 25%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #app-calc{
+        padding: 35px 32%;
+    }
+
+    #app-calc #buttons-calc{
+        grid-template-rows: repeat(5, 55px);
+        gap: 30px
+    }
+
+    #app-calc #buttons-calc button{
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body>
+  <div id="app-calc">
+    <div id="header-app-calc">
+      <div id="navbar">
+        <h1>calc</h1>
+
+        <div id="all-toggle">
+
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <h4>THEME</h4>
+          <div id="div_toggle"><span></span></div>
+        </div>
+      </div>
+      <div id="screen-calc"></div>
+    </div>
+    <div id="buttons-calc">
+      <button onclick="calc(7)">7</button>
+      <button onclick="calc(8)">8</button>
+      <button onclick="calc(9)">9</button>
+      <button id="del" onclick="calc('del')">DEL</button>
+      <button onclick="calc(4)">4</button>
+      <button onclick="calc(5)">5</button>
+      <button onclick="calc(6)">6</button>
+      <button onclick="calc('+')">+</button>
+      <button onclick="calc(1)">1</button>
+      <button onclick="calc(2)">2</button>
+      <button onclick="calc(3)">3</button>
+      <button onclick="calc('-')">-</button>
+      <button onclick="calc('.')">.</button>
+      <button onclick="calc(0)">0</button>
+      <button onclick="calc('/')">/</button>
+      <button onclick="calc('*')">x</button>
+      <button id="reset" onclick="calc('reset')">RESET</button>
+      <button id="final" onclick="calc('=')">=</button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
